@@ -323,7 +323,7 @@ class InputBoxView : AppCompatEditText {
 
     /**
      * AUTHOR:AbnerMing
-     * INTRODUCE:获取最终的输入结果
+     * INTRODUCE:获取连续的输入结果
      */
     private var mChangeContent: ((String) -> Unit?)? = null
     fun inputChangeContent(block: (result: String) -> Unit) {
