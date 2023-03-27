@@ -3,14 +3,14 @@
 
 ## 效果展示
 
-<img src="image/input_001.jpg" width="100px" />
-<img src="image/input_002.jpg" width="100px" />
-<img src="image/input_003.jpg" width="100px" />
-<img src="image/input_004.jpg" width="100px" />
-<img src="image/input_005.jpg" width="100px" />
-<img src="image/input_006.jpg" width="100px" />
-<img src="image/input_007.jpg" width="100px" />
-<img src="image/input_008.jpg" width="100px" />
+<img src="image/input_001.jpg" width="300px" />
+<img src="image/input_002.jpg" width="300px" />
+<img src="image/input_003.jpg" width="300px" />
+<img src="image/input_004.jpg" width="300px" />
+<img src="image/input_005.jpg" width="300px" />
+<img src="image/input_006.jpg" width="300px" />
+<img src="image/input_007.jpg" width="300px" />
+<img src="image/input_008.jpg" width="300px" />
 
 ## 快速开始
 
