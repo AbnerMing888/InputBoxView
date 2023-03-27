@@ -1,0 +1,3 @@
+rootProject.name = "InputBoxView"
+include ':app'
+include ':edit'

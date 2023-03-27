@@ -1,0 +1,3 @@
+apply from: "${rootProject.rootDir}/assembly.gradle"
+project.ext.setAppOrLibDefaultConfig project
+apply from: 'maven-edit-aar.gradle'

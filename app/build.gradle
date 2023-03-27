@@ -1,0 +1,6 @@
+apply from: "${rootProject.rootDir}/assembly.gradle"
+apply plugin: 'kotlin-kapt'
+project.ext.setAppDefaultConfig project
+dependencies {
+    implementation "com.vip:edit:1.0.1"
+}

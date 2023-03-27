@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputBoxView">
+        <!--绘制类型,目前有三种，线，矩形，圆角-->
+        <attr name="input_canvas_type" format="enum">
+            <enum name="line" value="0" />
+            <enum name="rect" value="1" />
+            <enum name="round" value="2" />
+        </attr>
+        <!--绘制画笔类型，空心还是实心-->
+        <attr name="input_canvas_style" format="enum">
+            <enum name="stroke" value="0" />
+            <enum name="fill" value="1" />
+            <enum name="fill_and_stroke" value="2" />
+        </attr>
+        <!--输入框的背景-->
+        <attr name="input_background" format="color" />
+        <!--输入框的选择背景-->
+        <attr name="input_select_background" format="color" />
+        <!--输入框圆角度数-->
+        <attr name="input_radius" format="dimension" />
+        <!--输入框下划线的高度-->
+        <attr name="input_line_height" format="dimension" />
+        <!--输入框的长度-->
+        <attr name="input_length" format="integer" />
+        <!--输入框的间距-->
+        <attr name="input_spacing" format="dimension" />
+        <!--输入框的内容颜色-->
+        <attr name="input_text_color" format="color" />
+        <!--输入框的文字大小-->
+        <attr name="input_text_size" format="dimension" />
+        <!--输入框的文字类型-->
+        <attr name="input_text_type" format="enum">
+            <enum name="text" value="0" />
+            <enum name="asterisk" value="1" />
+            <enum name="round" value="2" />
+        </attr>
+        <!--输入框是否有光标-->
+        <attr name="input_is_cursor" format="boolean" />
+        <!--输入框光标方向-->
+        <attr name="input_cursor_direction" format="boolean" />
+        <!--输入框光标宽度-->
+        <attr name="input_cursor_width" format="dimension" />
+        <!--输入框光标颜色-->
+        <attr name="input_cursor_color" format="color" />
+        <!--输入框光标间距-->
+        <attr name="input_cursor_spacing" format="color" />
+        <!--输入框的光标是否闪烁-->
+        <attr name="input_cursor_is_twinkle" format="boolean" />
+        <!--输入框是否弹起原生的软件盘-->
+        <attr name="input_is_android_keyboard" format="boolean" />
+
+    </declare-styleable>
+
+</resources>
