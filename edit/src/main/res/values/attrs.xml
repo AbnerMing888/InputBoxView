@@ -49,6 +49,9 @@
         <attr name="input_cursor_is_twinkle" format="boolean" />
         <!--输入框是否弹起原生的软件盘-->
         <attr name="input_is_android_keyboard" format="boolean" />
+        <!--横向的光标距离底部的距离-->
+        <attr name="input_cursor_margin_bottom" format="dimension" />
+
 
     </declare-styleable>
 

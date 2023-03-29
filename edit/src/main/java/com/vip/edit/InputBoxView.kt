@@ -66,6 +66,8 @@ class InputBoxView : AppCompatEditText {
 
     private var mSelectBackGroundColor = 0//选中的边框颜色
 
+    private var mCursorMarginBottom = 10f//光标距离底部的距离
+
     //动画
     private val cursorAnim: ValueAnimator = ValueAnimator.ofInt(0, 2).apply {
         duration = 1000
@@ -134,6 +136,9 @@ class InputBoxView : AppCompatEditText {
                 //输入框是否弹起原生的软件盘
                 mIsAndroidKeyBoard =
                     getBoolean(R.styleable.InputBoxView_input_is_android_keyboard, true)
+                //横向的光标距离底部的距离
+                mCursorMarginBottom =
+                    getDimension(R.styleable.InputBoxView_input_cursor_spacing, mCursorSpacing)
             }
 
         initData(context)
@@ -178,7 +183,10 @@ class InputBoxView : AppCompatEditText {
 
     }
 
-    //绘制内容
+    /**
+     * AUTHOR:AbnerMing
+     * INTRODUCE:绘制内容
+     */
     private fun drawText(canvas: Canvas?) {
         mPaint!!.apply {
             style = Paint.Style.FILL
@@ -200,10 +208,12 @@ class InputBoxView : AppCompatEditText {
                 val rect = Rect()
                 mPaint!!.getTextBounds(endContent, 0, content.length, rect)
                 val w = mPaint!!.measureText(endContent)//获取文字的宽
+                //获取文字的X坐标
                 val textX = ((a + 1) * mRectWidth) + a * mSpacing - mRectWidth / 2 - w / 2
                 val h = rect.height()
+                //获取文字的Y坐标
                 var textY = (height + h) / 2.0f
-
+                //针对星号做特殊处理
                 if (mTextType == 1) {
                     textY += mTextSize / 3
                 }
@@ -241,9 +251,9 @@ class InputBoxView : AppCompatEditText {
                 //横向光标
                 canvas?.drawLine(
                     startX + mCursorSpacing,
-                    height.toFloat() - 10,
+                    height.toFloat() - mCursorMarginBottom,//减去距离底部的边距
                     endX - mCursorSpacing,
-                    height.toFloat() - 10,
+                    height.toFloat() - mCursorMarginBottom,
                     mCursorPaint!!
                 )
             }
@@ -293,6 +303,8 @@ class InputBoxView : AppCompatEditText {
     ) {
         super.onTextChanged(text, start, lengthBefore, lengthAfter)
         if (!mIsAttachedToWindows) return
+
+        //输入框的光标是否闪烁
         if (mCursorTwinkle) {
             if ((text?.length ?: 0) >= mLength) {
                 cursorAnim.takeIf { it.isStarted || it.isRunning }?.end()
@@ -342,7 +354,7 @@ class InputBoxView : AppCompatEditText {
 
     /**
      * AUTHOR:AbnerMing
-     * INTRODUCE:绘制圆角矩形
+     * INTRODUCE:绘制输入框
      */
     private fun canvasInputBox(canvas: Canvas?) {
         mPaint!!.apply {

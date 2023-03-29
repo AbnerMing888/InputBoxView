@@ -3,14 +3,14 @@
 
 ## 效果展示
 
-<img src="image/input_001.jpg" width="300px" />
-<img src="image/input_002.jpg" width="300px" />
-<img src="image/input_003.jpg" width="300px" />
-<img src="image/input_004.jpg" width="300px" />
-<img src="image/input_005.jpg" width="300px" />
-<img src="image/input_006.jpg" width="300px" />
-<img src="image/input_007.jpg" width="300px" />
-<img src="image/input_008.jpg" width="300px" />
+<img src="image/input_001.jpg" width="360px" />
+<img src="image/input_002.jpg" width="360px" />
+<img src="image/input_003.jpg" width="360px" />
+<img src="image/input_004.jpg" width="360px" />
+<img src="image/input_005.jpg" width="360px" />
+<img src="image/input_006.jpg" width="360px" />
+<img src="image/input_007.jpg" width="360px" />
+<img src="image/input_008.jpg" width="360px" />
 
 ## 快速开始
 
@@ -27,7 +27,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.vip:edit:1.0.1'
+    implementation 'com.vip:edit:1.0.3'
 }
 ```
 3、XML引入即可
@@ -71,7 +71,8 @@ dependencies {
 | input_cursor_color | color | 输入框光标颜色 |
 | input_cursor_spacing | color | 输入框光标间距 |
 | input_cursor_is_twinkle | boolean | 输入框的光标是否闪烁 |
-| input_is_android_keyboard | boolean | 输入框是否弹起原生的软件盘，默认谈起，可以调用自定义的键盘 |
+| input_is_android_keyboard | boolean | 输入框是否弹起原生的软件盘，默认弹起，可以调用自定义的键盘 |
+| input_cursor_margin_bottom | dimension | 横向的光标距离底部的距离 |
 
 5、方法介绍
 
