@@ -27,7 +27,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.vip:edit:1.0.3'
+    implementation 'com.vip:edit:1.0.4'
 }
 ```
 3、XML引入即可
