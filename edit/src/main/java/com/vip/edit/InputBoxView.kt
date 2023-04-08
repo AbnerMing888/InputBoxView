@@ -498,8 +498,22 @@ class InputBoxView : AppCompatEditText {
      */
     private var mEndContent = ""
     fun setContent(content: String) {
-        mEndContent += content
-        setText(mEndContent)
+        if (mEndContent.length < mLength) {
+            mEndContent += content
+            setText(mEndContent)
+        }
+
+    }
+
+    /**
+     * AUTHOR:AbnerMing
+     * INTRODUCE:逐个删除
+     */
+    fun deleteContent() {
+        if (!TextUtils.isEmpty(mEndContent)) {
+            mEndContent = mEndContent.substring(0, mEndContent.length - 1)
+            setText(mEndContent)
+        }
     }
 
 }

@@ -78,7 +78,8 @@ dependencies {
 
 | 方法 | 参数 | 概述 |
 |  ----  |  ----  |  ----  |
-| clearContent | 无参 | 清空内容 |
+| clearContent | 无参 | 清空内容，全部清空 |
+| deleteContent | 无参 | 逐个删除内容，触发一次，删除一个 |
 | setContent | String | 设置内容 |
 | hideInputMethod | 无参 | 隐藏软键盘，使用系统软键盘时 |
 | showKeyBoard | 回调函数 | 需要弹起自己的软键盘时可以调用 |
